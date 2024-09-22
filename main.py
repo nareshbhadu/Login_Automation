@@ -10,6 +10,11 @@ chrome_options.add_argument("--ignore-ssl-errors")
 chrome_options.add_argument("--allow-insecure-localhost")
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-gpu")
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")  # Reduces IO time
+chrome_options.add_argument("--disable-extensions")     # Speeds up startup
+chrome_options.add_argument("--disable-infobars")       # Prevents popup notifications
+
 
 # Initialize Chrome WebDriver
 driver = webdriver.Chrome(options=chrome_options)
